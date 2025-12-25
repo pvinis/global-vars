@@ -29,6 +29,7 @@ struct ContentView: View {
                 Label("Set String Global Variable", systemImage: "text.quote")
                 Label("Get String Global Variable", systemImage: "text.quote")
                 Label("Get All Global Variables", systemImage: "list.bullet")
+                Label("Delete Global Variable", systemImage: "trash")
             }
             .font(.callout)
             .foregroundStyle(.secondary)

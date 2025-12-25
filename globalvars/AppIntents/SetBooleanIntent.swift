@@ -2,7 +2,7 @@ import AppIntents
 
 struct SetBooleanIntent: AppIntent {
     static let title: LocalizedStringResource = "Set Boolean Global Variable"
-    static let description = IntentDescription("Sets a boolean variable to the specified value")
+    static let description = IntentDescription("Sets a boolean global variable to the specified value", categoryName: "Boolean")
 
     @Parameter(title: "Variable Name")
     var variableName: String

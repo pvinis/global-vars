@@ -2,7 +2,7 @@ import AppIntents
 
 struct GetAllVariablesIntent: AppIntent {
     static let title: LocalizedStringResource = "Get All Global Variables"
-    static let description = IntentDescription("Gets all stored global variables as a formatted list")
+    static let description = IntentDescription("Gets all stored global variables as a formatted list", categoryName: "Misc")
 
     @MainActor
     func perform() async throws -> some IntentResult & ReturnsValue<String> {
