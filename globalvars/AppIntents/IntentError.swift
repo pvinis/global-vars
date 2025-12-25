@@ -7,7 +7,7 @@ enum IntentError: Swift.Error, CustomLocalizedStringResourceConvertible {
     var localizedStringResource: LocalizedStringResource {
         switch self {
         case .variableNotFound(let name):
-            return "Variable '\(name)' not found"
+            return "Variable '\(name)' not found. It's probably not set yet."
         }
     }
 }
