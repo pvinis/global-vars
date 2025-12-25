@@ -1,7 +1,7 @@
 import AppIntents
 
 struct SetStringIntent: AppIntent {
-    static let title: LocalizedStringResource = "Set String Variable"
+    static let title: LocalizedStringResource = "Set String Global Variable"
     static let description = IntentDescription("Sets a string variable to the specified value")
 
     @Parameter(title: "Variable Name")

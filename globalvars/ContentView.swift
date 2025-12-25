@@ -24,10 +24,10 @@ struct ContentView: View {
                 .multilineTextAlignment(.center)
 
             VStack(alignment: .leading, spacing: 8) {
-                Label("Set Boolean Variable", systemImage: "checkmark.circle")
-                Label("Get Boolean Variable", systemImage: "checkmark.circle.fill")
-                Label("Set String Variable", systemImage: "text.quote")
-                Label("Get String Variable", systemImage: "text.quote")
+                Label("Set Boolean Global Variable", systemImage: "checkmark.circle")
+                Label("Get Boolean Global Variable", systemImage: "checkmark.circle.fill")
+                Label("Set String Global Variable", systemImage: "text.quote")
+                Label("Get String Global Variable", systemImage: "text.quote")
                 Label("Get All Global Variables", systemImage: "list.bullet")
             }
             .font(.callout)

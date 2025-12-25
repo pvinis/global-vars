@@ -1,7 +1,7 @@
 import AppIntents
 
 struct GetBooleanIntent: AppIntent {
-    static let title: LocalizedStringResource = "Get Boolean Variable"
+    static let title: LocalizedStringResource = "Get Boolean Global Variable"
     static let description = IntentDescription("Gets the value of a boolean variable")
 
     @Parameter(title: "Variable Name")
