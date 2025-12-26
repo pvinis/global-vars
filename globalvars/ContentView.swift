@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    private var version: String {
+        Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "?"
+    }
+
+    private var build: String {
+        Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "?"
+    }
+
     var body: some View {
         VStack(spacing: 24) {
+            Spacer()
+
             Image(systemName: "square.stack.3d.up.fill")
                 .font(.system(size: 60))
                 .foregroundStyle(.tint)
@@ -33,6 +43,12 @@ struct ContentView: View {
             }
             .font(.callout)
             .foregroundStyle(.secondary)
+
+            Spacer()
+
+            Text("Version \(version) (\(build))")
+                .font(.caption)
+                .foregroundStyle(.tertiary)
         }
         .padding(32)
     }

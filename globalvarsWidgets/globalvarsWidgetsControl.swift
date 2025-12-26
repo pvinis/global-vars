@@ -52,13 +52,14 @@ struct GlobalVarControlWidget: ControlWidget {
             kind: "com.pvinis.globalvars.control",
             intent: ControlVariableConfiguration.self
         ) { configuration in
-            ControlWidgetToggle(
-                isOn: getCurrentValue(for: configuration.variableName),
+            let isOn = getCurrentValue(for: configuration.variableName)
+            return ControlWidgetToggle(
+                isOn: isOn,
                 action: RunShortcutIntent(
-                    value: !getCurrentValue(for: configuration.variableName),
+                    value: !isOn,
                     shortcutName: configuration.shortcutName
                 )
-            ) { isOn in
+            ) {
                 Label(
                     isOn ? configuration.trueText : configuration.falseText,
                     systemImage: isOn ? "checkmark.circle.fill" : "circle"
