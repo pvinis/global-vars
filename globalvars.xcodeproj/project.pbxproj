@@ -6,14 +6,65 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1AE950AA2EFDA6B5001B4949 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE950A92EFDA6B5001B4949 /* WidgetKit.framework */; };
+		1AE950AC2EFDA6B5001B4949 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE950AB2EFDA6B5001B4949 /* SwiftUI.framework */; };
+		1AE950B92EFDA6B5001B4949 /* globalvarsWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1AE950A72EFDA6B5001B4949 /* globalvarsWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1AE950B72EFDA6B5001B4949 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A779FBA2EFD929F0091E50A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AE950A62EFDA6B5001B4949;
+			remoteInfo = globalvarsWidgetsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1AE950BE2EFDA6B5001B4949 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1AE950B92EFDA6B5001B4949 /* globalvarsWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1A779FC22EFD929F0091E50A /* globalvars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = globalvars.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AE950A72EFDA6B5001B4949 /* globalvarsWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = globalvarsWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AE950A92EFDA6B5001B4949 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		1AE950AB2EFDA6B5001B4949 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1AE950BA2EFDA6B5001B4949 /* Exceptions for "globalvarsWidgets" folder in "globalvarsWidgetsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 1AE950A62EFDA6B5001B4949 /* globalvarsWidgetsExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1A779FC42EFD929F0091E50A /* globalvars */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = globalvars;
+			sourceTree = "<group>";
+		};
+		1AE950AD2EFDA6B5001B4949 /* globalvarsWidgets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1AE950BA2EFDA6B5001B4949 /* Exceptions for "globalvarsWidgets" folder in "globalvarsWidgetsExtension" target */,
+			);
+			path = globalvarsWidgets;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +77,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1AE950A42EFDA6B5001B4949 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AE950AC2EFDA6B5001B4949 /* SwiftUI.framework in Frameworks */,
+				1AE950AA2EFDA6B5001B4949 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				1A779FC42EFD929F0091E50A /* globalvars */,
+				1AE950AD2EFDA6B5001B4949 /* globalvarsWidgets */,
+				1AE950A82EFDA6B5001B4949 /* Frameworks */,
 				1A779FC32EFD929F0091E50A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +103,18 @@
 			isa = PBXGroup;
 			children = (
 				1A779FC22EFD929F0091E50A /* globalvars.app */,
+				1AE950A72EFDA6B5001B4949 /* globalvarsWidgetsExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1AE950A82EFDA6B5001B4949 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AE950A92EFDA6B5001B4949 /* WidgetKit.framework */,
+				1AE950AB2EFDA6B5001B4949 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +127,12 @@
 				1A779FBE2EFD929F0091E50A /* Sources */,
 				1A779FBF2EFD929F0091E50A /* Frameworks */,
 				1A779FC02EFD929F0091E50A /* Resources */,
+				1AE950BE2EFDA6B5001B4949 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1AE950B82EFDA6B5001B4949 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				1A779FC42EFD929F0091E50A /* globalvars */,
@@ -69,6 +143,28 @@
 			productName = globalvars;
 			productReference = 1A779FC22EFD929F0091E50A /* globalvars.app */;
 			productType = "com.apple.product-type.application";
+		};
+		1AE950A62EFDA6B5001B4949 /* globalvarsWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AE950BB2EFDA6B5001B4949 /* Build configuration list for PBXNativeTarget "globalvarsWidgetsExtension" */;
+			buildPhases = (
+				1AE950A32EFDA6B5001B4949 /* Sources */,
+				1AE950A42EFDA6B5001B4949 /* Frameworks */,
+				1AE950A52EFDA6B5001B4949 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1AE950AD2EFDA6B5001B4949 /* globalvarsWidgets */,
+			);
+			name = globalvarsWidgetsExtension;
+			packageProductDependencies = (
+			);
+			productName = globalvarsWidgetsExtension;
+			productReference = 1AE950A72EFDA6B5001B4949 /* globalvarsWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +177,9 @@
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					1A779FC12EFD929F0091E50A = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					1AE950A62EFDA6B5001B4949 = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
@@ -100,12 +199,20 @@
 			projectRoot = "";
 			targets = (
 				1A779FC12EFD929F0091E50A /* globalvars */,
+				1AE950A62EFDA6B5001B4949 /* globalvarsWidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1A779FC02EFD929F0091E50A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AE950A52EFDA6B5001B4949 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +229,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1AE950A32EFDA6B5001B4949 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1AE950B82EFDA6B5001B4949 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AE950A62EFDA6B5001B4949 /* globalvarsWidgetsExtension */;
+			targetProxy = 1AE950B72EFDA6B5001B4949 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1A779FCB2EFD929F0091E50A /* Debug */ = {
@@ -253,10 +375,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = globalvars/globalvars.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = CAG2W9M777;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Global Vars";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -266,7 +389,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pvinis.globalvars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -286,10 +409,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = globalvars/globalvars.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = CAG2W9M777;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Global Vars";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,12 +423,72 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pvinis.globalvars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1AE950BC2EFDA6B5001B4949 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = CAG2W9M777;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = globalvarsWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = globalvarsWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 0.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pvinis.globalvars.globalvarsWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1AE950BD2EFDA6B5001B4949 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = CAG2W9M777;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = globalvarsWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = globalvarsWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 0.3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pvinis.globalvars.globalvarsWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -329,6 +513,15 @@
 			buildConfigurations = (
 				1A779FCE2EFD929F0091E50A /* Debug */,
 				1A779FCF2EFD929F0091E50A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AE950BB2EFDA6B5001B4949 /* Build configuration list for PBXNativeTarget "globalvarsWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AE950BC2EFDA6B5001B4949 /* Debug */,
+				1AE950BD2EFDA6B5001B4949 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
